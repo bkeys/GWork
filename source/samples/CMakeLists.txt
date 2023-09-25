@@ -45,7 +45,8 @@ if(WITH_SAMPLE)
                           GworkUtil
                           Gwork${GWK_RENDER_NAME}
                           ${GWK_RENDER_LIBRARIES}
-                          ${GWK_REFLECT_LIBRARIES})
+                          ${GWK_REFLECT_LIBRARIES}
+)
 
     if(WITH_TESTS)
         target_link_libraries(${SAMPLE_NAME} GworkTest)

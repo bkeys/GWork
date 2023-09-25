@@ -239,7 +239,7 @@ namespace Gwk {
                 if (buffer)
                 {
                     texData.m_ReadData = deleted_unique_ptr<unsigned char>(
-                        new unsigned char[texData.width * texData.height * bytes],
+                        new unsigned char[static_cast<unsigned int>(texData.width * texData.height * bytes)],
                         [](unsigned char* mem) { if (mem) delete[](mem); });
                     memcpy(texData.m_ReadData.get(), buffer, texData.width * texData.height * bytes);
                     texData.readable = true;

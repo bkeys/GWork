@@ -118,7 +118,7 @@ int main()
     //
     // Create our unittest control (which is a Window with controls in it)
     //
-    auto pUnit = new TestFrame(pCanvas);
+    Gwk::Test::TestFrame *pUnit = new Gwk::Test::TestFrame(pCanvas);
     pUnit->SetPos(10, 10);
 
     MyEventReceiver* eventReceiver = new MyEventReceiver(pCanvas);

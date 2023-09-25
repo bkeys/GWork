@@ -131,10 +131,10 @@ if(RENDER_IRRLICHT)
     if (APPLE)
         set(IRR_DEPENDENCIES "-framework OpenGL")
     elseif(UNIX)
-        set(IRR_DEPENDENCIES "-lGL")
+#        set(IRR_DEPENDENCIES "-lGL") #Not needed I don't think
     endif()
     set(GWK_RENDER_INCLUDES "${IRRLICHT_INCLUDE_DIR}")
-    set(GWK_RENDER_LIBRARIES "${IRRLICHT_LIBRARY} ${IRR_DEPENDENCIES}")
+    set(GWK_RENDER_LIBRARIES "${IRRLICHT_LIBRARY}")
 endif(RENDER_IRRLICHT)
 
 if(RENDER_NULL)
