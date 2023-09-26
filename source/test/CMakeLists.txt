@@ -64,8 +64,6 @@ source_group("${GWK_SOURCE_FOLDER}"
 # Test library
 if(WITH_TESTS)
   add_library(GworkTest STATIC ${GWK_TEST_API} ${GWK_TEST_REFLECT})
-  message(***)
-  message("${Gwork}")
     target_link_libraries(GworkTest Gwork Gwork${GWK_RENDERER_NAME} ${LUA_LIBRARIES})
     
     if(WITH_ALLOC_STATS)

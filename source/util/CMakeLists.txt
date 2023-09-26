@@ -38,7 +38,7 @@ target_link_libraries(GworkUtil
                       Gwork Gwork${GWK_RENDER_NAME}
                       ${GWK_REFLECT_LIBRARIES})
 
-install(DIRECTORY ${GWK_SOURCE_DIR}/util/include/Gwork
+install(DIRECTORY ${GWK_SOURCE_DIR}/source/util/include/Gwork
         DESTINATION include)
 
 install(TARGETS GworkUtil
