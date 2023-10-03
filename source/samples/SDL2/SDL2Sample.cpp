@@ -12,7 +12,7 @@
 #include <Gwork/Input/SDL2.h>
 #include <Gwork/Renderers/SDL2.h>
 #include <SDL.h>
-#include <SDL_ttf/SDL_ttf.h>
+#include <SDL_ttf.h>
 
 
 int main(int argc, char** argv)
