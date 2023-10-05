@@ -407,7 +407,7 @@ Gwk::Color OpenGL::PixelColor(const Gwk::Texture& texture, unsigned int x, unsig
     }
 
     SetTexture(texData.texture_id);
-    texData.m_ReadData = deleted_unique_ptr<unsigned char>(new unsigned char[texData.width * texData.height * iPixelSize], [](unsigned char* mem) { if (mem) delete[](mem); });
+    texData.m_ReadData = deleted_unique_ptr<unsigned char>(new unsigned char[static_cast<unsigned int>(texData.width * texData.height * iPixelSize)], [](unsigned char* mem) { if (mem) delete[](mem); });
     texData.readable = true;
 
     glGetTexImage(GL_TEXTURE_2D, 0, GL_RGBA, GL_UNSIGNED_BYTE, texData.m_ReadData.get());
