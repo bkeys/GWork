@@ -37,7 +37,7 @@ void Properties::OnSplitterMoved(Event::Info)
     InvalidateChildren();
 }
 
-void SetSplitterWidth(const unsigned int x_) {
+void Properties::SetSplitterWidth(const unsigned int x_) {
   Gwk::Rect current_bounds = m_splitterBar->GetBounds();
   current_bounds.x = x_;
   m_splitterBar->SetBounds(current_bounds);

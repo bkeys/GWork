@@ -38,7 +38,7 @@ namespace Gwk
             PropertyRow* Find(const String& text);
 
             virtual int GetSplitWidth();
-            virtual void SetSplitterWidth(const unsigned int x_)
+            virtual void SetSplitterWidth(const unsigned int x_);
             virtual void Clear();
 
         protected:
